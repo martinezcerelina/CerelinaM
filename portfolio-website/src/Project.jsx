@@ -230,7 +230,6 @@ function Project() {
                                 </div>
                             </div>
 
-                            <button>View All Projects</button>
                         </div>
                     ))}
                 </div>
