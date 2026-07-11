@@ -229,6 +229,8 @@ function Project() {
                                     <button className="card-btn" onClick={() => openModal(project)}>View</button>
                                 </div>
                             </div>
+
+                            <button>View All Projects</button>
                         </div>
                     ))}
                 </div>
