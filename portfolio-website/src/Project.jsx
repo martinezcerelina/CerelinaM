@@ -184,7 +184,6 @@ function Project() {
                                 </article>
                             );
                         })}
-
                     </div>
                 </div>
             )}
@@ -209,10 +208,6 @@ function Project() {
                             </div>
                         </div>
                     ))}
-
-                    <div className="view-all-wrapper">
-                        <button className="button-3">View All Projects</button>
-                    </div>
                 </div>
             )}
 
@@ -237,12 +232,12 @@ function Project() {
 
                         </div>
                     ))}
-
-                    <div className="view-all-wrapper">
-                        <button className="button-3">View All Projects</button>
-                    </div>
                 </div>
             )}
+
+            <div className="view-all-wrapper">
+                <button className="button-3">View All Projects</button>
+            </div>
 
             {/* Project Viewer Modal */}
             {selectedProject && (
