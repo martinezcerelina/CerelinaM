@@ -2,49 +2,27 @@ import { useState } from 'react';
 import TargetDateField from './TargetDateField';
 
 function Contact() {
+    // React style states for handling your custom calendar logic
     const [view, setView] = useState('weekly');
+
+    const toggleCalPopover = (e) => {
+        console.log("Toggle calendar popover executed", e);
+    };
+
+    const switchView = (selectedView) => {
+        setView(selectedView);
+        console.log(`Switched calendar view to: ${selectedView}`);
+    };
+
+    const navMonth = (direction) => {
+        console.log(`Navigating month by direction steps: ${direction}`);
+    };
+
     const [selectedDate, setSelectedDate] = useState('');
-    const [status, setStatus] = useState(null); // 'sending' | 'success' | 'error' | null
 
     const handleDateChange = (formattedDate) => {
         setSelectedDate(formattedDate);
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setStatus('sending');
-
-        const form = e.target;
-        const payload = {
-            fullName: form['full-name'].value,
-            email: form['email'].value,
-            subject: form['subject'].value,
-            projType: form['proj-type'].value,
-            budget: form['budget-range'].value,
-            targetDate: selectedDate,
-            message: form['message'].value,
-        };
-
-        try {
-            const response = await fetch('/api/send-mail.php', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
-            });
-
-            const result = await response.json();
-
-            if (result.success) {
-                setStatus('success');
-                form.reset();
-                setSelectedDate('');
-            } else {
-                setStatus('error');
-            }
-        } catch (err) {
-            console.error(err);
-            setStatus('error');
-        }
+        console.log("Selected Date in Form:", formattedDate);
     };
 
     return (
@@ -53,7 +31,7 @@ function Contact() {
                 <div className="title">
                     <h1>Contact Me</h1>    
                 </div>
-                <h4>Let's build something great together.</h4>
+                <h4>Let’s build something great together.</h4>
                 <p>Looking for collaboration or a creative partner? My inbox is always open for project discussions or tech-focused conversations. Feel free to reach out.</p>
                 <div className="socials-vertical">
                     <div className="social">
@@ -76,7 +54,7 @@ function Contact() {
             </div>
 
             <div className="right-contact">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={(e) => e.preventDefault()}>
                     <div className="form-group">
                         <label className="form-label" htmlFor="full-name">Full Name:</label>
                         <input className="form-input" type="text" placeholder="e.g. Juan Dela Cruz" id="full-name" name="full-name" required />
@@ -94,7 +72,7 @@ function Contact() {
                         <div className="form-group">
                             <label className="form-label" htmlFor="proj-type">Project Type:</label>
                             <select className="form-select" id="proj-type" name="proj-type" defaultValue="" required>
-                                <option value="" disabled>Select Type</option>
+                                <option value="Select Type" disabled>Select Type</option>
                                 <option>Web Design</option>
                                 <option>Graphic Design</option>
                                 <option>2D Animation</option>
@@ -114,21 +92,17 @@ function Contact() {
                             label="Target Date:" 
                             name="target-date" 
                             onChange={handleDateChange} 
-                        />
+                    />
+                        
                     </div>
+
 
                     <div className="form-group">
                         <label className="form-label" htmlFor="message">Message:</label>
                         <textarea className="form-textarea" placeholder="Value" id="message" name="message" required></textarea>
                     </div>
-
-                    {status === 'success' && <p className="form-status success">Message sent! I'll get back to you soon.</p>}
-                    {status === 'error' && <p className="form-status error">Something went wrong. Please try again or email me directly.</p>}
-
                     <div className="form-send-wrap">
-                        <button type="submit" disabled={status === 'sending'}>
-                            {status === 'sending' ? 'Sending...' : 'Send Message'}
-                        </button>
+                        <button type="submit">Send Message</button>
                     </div>
                 </form>
             </div>
