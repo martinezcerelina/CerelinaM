@@ -1026,7 +1026,18 @@ margin: auto 0;
   width: 60px; height: 60px; fill: var(--yellow); opacity: 0.5;
 }
 
-
+.form-status {
+  font-family: 'SpaceGrotesk';
+  font-size: 13px;
+  margin-top: 12px;
+  text-align: center;
+}
+.form-status.success {
+  color: #4ade80;
+}
+.form-status.error {
+  color: #f87171;
+}
 
 footer {
     background: linear-gradient(to right, #FF007F 0%, #FF6B35 50%, #FFD558 100%);
