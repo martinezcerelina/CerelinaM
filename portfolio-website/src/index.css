@@ -14,7 +14,7 @@ h6 {font-size: 12px;}
 p {font-size: 14px;}
 
 #root {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   width: 100%;
   max-width: 100%;
 }
@@ -54,10 +54,10 @@ html::-webkit-scrollbar {
 }
 
 html, body {
-    background:
-    radial-gradient(ellipse 75% 65% at 100% 20%, #8B0050 0%, transparent 80%),
-    radial-gradient(ellipse 40% 50% at 10% 100%, #6B0040 0%, transparent 90%),
-    #0d0010; 
+  background:
+  radial-gradient(ellipse 75% 65% at 100% 20%, #8B0050 0%, transparent 80%),
+  radial-gradient(ellipse 40% 50% at 10% 100%, #6B0040 0%, transparent 90%),
+  #0d0010; 
   background-attachment: fixed;
   scroll-behavior: smooth; 
   min-height: 100vh;
@@ -66,22 +66,14 @@ html, body {
   font-family: "SpaceGrotesk";
   max-width: 100%;
   overflow-x: hidden;
-   overscroll-behavior-x: none;
-   width: 100%;
-   margin: 0;
-   padding: 0;
+  overscroll-behavior-x: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-header {
-  margin: 32px; 
-  display: flex;
-  justify-content: space-between;
-}
-nav {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;    
-  gap: 75px;}
+header { margin: 32px 32px; display: flex; justify-content: space-between; }
+nav { display: flex; margin-left: auto; margin-right: auto; gap: 75px; }
 nav a {
   color: var(--white); 
   text-decoration: none;
@@ -142,13 +134,35 @@ button {
   display: flex;
   flex: 0 0 430px;
   width: 430px;
-  margin-top: 55px;
+  margin-top: 25px;
+
+  position: relative;
 }
 .CerelinaPicture img {
   width: 100%;
   height: auto;
   display: block;
 }
+
+.deco-star {
+  position: absolute;
+  display: block;
+  z-index: 3;
+}
+
+.deco-star img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.deco-star--yellow {width: 45px; height: 45px; top: 40px; right: 50px; transform:rotate(40deg);}
+.deco-star--pink {width: 75px; height: 75px; top: 50%; left: -60px; transform:rotate(80deg);}
+.deco-moon {position: absolute;bottom: 50px; right: -30px; width: 85px; height: 85px; z-index: 3; transform:rotate(260deg);}
+.deco-moon img {width: 100%; height: 100%; display: block; }
+
+
+
 .infos {
   flex: 1 1 auto;
   text-align: right;
@@ -162,7 +176,7 @@ button {
 .name h2 {
   font-family: "Michroma";
   font-weight: normal;
-  margin-top: 88px;
+  margin-top: 50px;
   margin-bottom: 27px;
 }
 .name h1 {
@@ -210,11 +224,10 @@ button {
   border-radius: 100%;
 }
 
-/* Divider */
+/* DIVIDER */
 .divider {
   position: relative;
   height: 77px;
-  /* overflow: hidden; */
 }
 .bg {
   background-color: var(--pink);
@@ -251,6 +264,9 @@ button {
   padding: 5px 0;
 }
 
+
+
+/* ABOUT ME SECTION */
 #aboutme-section {
   display: flex;
   margin: 0 14%;
@@ -362,7 +378,7 @@ button {
 
 #certificates-section {
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .cert-title {
   margin-bottom: 50px;
@@ -526,25 +542,6 @@ button {
 
 .card-btn:hover { 
   background: rgba(0,0,0,0.35); 
-}
-
-.button-3 {
-  color: var(--pink); 
-  background-color: var(--yellow); 
-  border: none; 
-  width: 188px; 
-  height: 35px; 
-  font-size: 14px; 
-  font-family: "Orbitron";
-  border-radius: 100px;
-  display: block;
-}
-
-.view-all-wrapper {
-  display: flex;
-  justify-content: center;
-  max-width: 1100px;
-  margin: 30px auto 0 auto;
 }
 
 .modal-overlay {
@@ -718,10 +715,11 @@ margin: auto 0;
 
 
 #projects-section {
-  margin-bottom: 100px;
+  padding-top: 50px;
+  margin-bottom: 50px;
 }
 .proj-title {
-    margin-bottom: 50px;
+    margin-bottom: 32px;
     text-align: center;
     color: var(--pink);
     font-family: "Syne";
@@ -893,15 +891,37 @@ margin: auto 0;
 
 }
 
+.button-3 {
+  color: var(--pink); 
+  background-color: var(--yellow); 
+  border: none; 
+  width: 188px; 
+  height: 35px; 
+  font-size: 14px; 
+  font-family: "Orbitron";
+  border-radius: 100px;
+  display: block;
+}
+
+.view-all-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 30px auto 0 auto;
+}
+.view-all-wrapper a {
+  text-decoration: none;
+}
 
 
 
 #contact-section {
+
   display: flex;
   max-width: 1100px;
   gap: 28px;
   margin: 0 auto 100px auto;
-  
+  padding-top: 50px;
 }
 
 .title {
@@ -1040,86 +1060,12 @@ margin: auto 0;
 }
 
 footer {
-    background: linear-gradient(to right, #FF007F 0%, #FF6B35 50%, #FFD558 100%);
-    padding: 40px 60px 24px;
+    background: rgba(255, 0, 127, 0.20);
+    padding: 40px 60px;
     position: relative;
     overflow: hidden;
     text-align: center;
     max-width: 100%;
-}
-
-.footer-name {
-    font-family: 'Syne';
-    color: var(--yellow);
-    text-align: center;
-    margin-bottom: 16px;
-}
-
-.footer-nav {
-    display: flex;
-    gap: 48px;
-    justify-content: center;
-    list-style: none;
-    margin-bottom: 20px;
-    padding: 0;
-}
-
-.footer-nav a {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--white);
-    text-decoration: none;
-    transition: opacity 0.2s;
-}
-.footer-nav a:hover { opacity: 0.75; }
-
-.footer-socials {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-.footer-soc {
-    width: auto;
-    height: auto;
-    border-radius: 0;
-    background: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--yellow);
-    transition: transform 0.2s, opacity 0.2s;
-}
-.footer-soc svg {
-    width: 22px;
-    height: 22px;
-    fill: var(--yellow);
-}
-.footer-soc:hover { transform: translateY(-2px); opacity: 0.8; }
-
-.footer-lang-btn {
-    display: inline-block;
-    margin: 0 auto 20px;
-    padding: 8px 28px;
-    background: transparent;
-    border: 2px solid var(--yellow);
-    border-radius: 30px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--yellow);
-    cursor: pointer;
-    letter-spacing: 0.04em;
-    transition: background 0.2s, color 0.2s;
-}
-.footer-lang-btn:hover {
-    background: var(--yellow);
-    color: #000;
 }
 
 .footer-copy {

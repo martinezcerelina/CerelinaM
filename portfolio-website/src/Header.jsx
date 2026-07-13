@@ -1,9 +1,8 @@
-
 function Header() {
     return (
         <header>
             <div id="logo-container">
-                <a href="/index.html" id="logo">
+                <a href="#home-container" id="logo">
                     <img 
                         src="./src/assets/logo.png" 
                         alt="CM Logo"
@@ -14,10 +13,10 @@ function Header() {
             </div>
 
             <nav>
-                <a href="">HOME</a>
-                <a href="">ABOUT</a>
-                <a href="">PROJECTS</a>
-                <a href="">CONTACTS</a>
+                <a href="#home-container">HOME</a>
+                <a href="#aboutme-section">ABOUT</a>
+                <a href="#projects-section">PROJECTS</a>
+                <a href="#contact-section">CONTACTS</a>
             </nav>
 
             <div id="CV">
@@ -29,4 +28,4 @@ function Header() {
     );
 }
 
-export default Header
+export default Header;

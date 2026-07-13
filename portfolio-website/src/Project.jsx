@@ -236,7 +236,7 @@ function Project() {
             )}
 
             <div className="view-all-wrapper">
-                <button className="button-3">View All Projects</button>
+                <a href="#"><button className="button-3">View All Projects</button></a>
             </div>
 
             {/* Project Viewer Modal */}

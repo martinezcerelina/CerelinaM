@@ -72,7 +72,7 @@ function Contact() {
                         <div className="form-group">
                             <label className="form-label" htmlFor="proj-type">Project Type:</label>
                             <select className="form-select" id="proj-type" name="proj-type" defaultValue="" required>
-                                <option value="Select Type" disabled>Select Type</option>
+                                <option value="" disabled>Select Type</option>
                                 <option>Web Design</option>
                                 <option>Graphic Design</option>
                                 <option>2D Animation</option>
