@@ -3,6 +3,10 @@ function About() {
         <section id="aboutme-section">
             <div className="left">
                 <div className="aboutme">
+                    <span className="deco-star deco-star--pink about-star-1"><img src="./src/assets/svg/star.svg" alt="star" /></span>
+                    <span className="deco-star deco-star--pink about-star-2"><img src="./src/assets/svg/star-yellow.svg" alt="star" /></span>
+                    <span className="deco-star deco-star--yellow about-star-3"><img src="./src/assets/svg/star-yellow.svg" alt="star" /></span>
+
                     <h1>About Me</h1>
                     <p>
                         My name is <strong>Cerelina Martinez.</strong> I am an Information Technology student based in Valenzuela City, currently studying at Pamantasan ng Lungsod ng Valenzuela (PLV) with experience through academic projects and university subjects. 
@@ -24,7 +28,7 @@ function About() {
                 </div>
 
                 <div className="CFO">
-                    <h4 className="labels">Currently Focused On</h4> {/* Fixed: class -> className */}
+                    <h4 className="labels">Currently Focused On</h4> 
                     <ul>
                         <li>Develop engaging multimedia content through 2D animation and digital drawing.</li>
                         <li>Create structured and efficient web systems.</li>
@@ -33,30 +37,33 @@ function About() {
             </div>
 
             <div className="right">
-                <div className="skills-container"> {/* Fixed: class -> className */}
-                    <div className="board-wrapper"> {/* Fixed: class -> className */}
-                        <img src="./src/assets/board.jpg" className="corkboard-bg" alt="Skills Board"/> {/* Fixed: class -> className */}
+                <div className="skills-container"> 
+                    <div className="board-wrapper"> 
+                        <span className="deco-star deco-star--pink board-star"><img src="./src/assets/svg/star.svg" alt="star" /></span>
+                        <span className="deco-moon board-moon"><img src="./src/assets/svg/moon-yellow.svg" alt="moon" /></span>
 
-                        <div className="icons-overlay"> {/* Fixed: class -> className */}
-                            <img src="./src/assets/svg/msword.svg" className="skill-icon icon-word" alt="Word"/> {/* Fixed: class -> className */}
-                            <img src="./src/assets/svg/msppt.svg" className="skill-icon icon-ppt" alt="PowerPoint"/> {/* Fixed: class -> className */}
-                            <img src="./src/assets/svg/msexcel.svg" className="skill-icon icon-excel" alt="Excel"/> {/* Fixed: class -> className */}
-                            <img src="./src/assets/svg/mysql.svg" className="skill-icon icon-mysql" alt="MySQL"/> {/* Fixed: class -> className */}
-                            <img src="./src/assets/svg/mongodb.svg" className="skill-icon icon-mongodb" alt="MongoDB"/> {/* Fixed: class -> className */}
-                            <img src="./src/assets/svg/capcut.svg" className="skill-icon icon-capcut" alt="CapCut"/> {/* Fixed: class -> className */}
-                            <img src="./src/assets/svg/figma.svg" className="skill-icon icon-figma" alt="Figma"/> {/* Fixed: class -> className */}
-                            <img src="./src/assets/svg/blender.svg" className="skill-icon icon-blender" alt="Blender"/> {/* Fixed: class -> className */}
-                            <img src="./src/assets/svg/ps.svg" className="skill-icon icon-ps" alt="Photoshop"/> {/* Fixed: class -> className */}
-                            <img src="./src/assets/svg/js2.svg" className="skill-icon icon-js" alt="JavaScript"/> {/* Fixed: class -> className */}
-                            <img src="./src/assets/svg/html5.svg" className="skill-icon icon-html" alt="HTML5"/> {/* Fixed: class -> className */}
-                            <img src="./src/assets/svg/css3.svg" className="skill-icon icon-css" alt="CSS3"/> {/* Fixed: class -> className */}
-                            <img src="./src/assets/svg/csharp.svg" className="skill-icon icon-csharp" alt="C#"/> {/* Fixed: class -> className */}
-                            <img src="./src/assets/svg/python.svg" className="skill-icon icon-python" alt="Python"/> {/* Fixed: class -> className */}
+                        <img src="./src/assets/board.jpg" className="corkboard-bg" alt="Skills Board"/> 
+
+                        <div className="icons-overlay">
+                            <img src="./src/assets/svg/msword.svg" className="skill-icon icon-word" alt="Word"/> 
+                            <img src="./src/assets/svg/msppt.svg" className="skill-icon icon-ppt" alt="PowerPoint"/> 
+                            <img src="./src/assets/svg/msexcel.svg" className="skill-icon icon-excel" alt="Excel"/> 
+                            <img src="./src/assets/svg/mysql.svg" className="skill-icon icon-mysql" alt="MySQL"/> 
+                            <img src="./src/assets/svg/mongodb.svg" className="skill-icon icon-mongodb" alt="MongoDB"/> 
+                            <img src="./src/assets/svg/capcut.svg" className="skill-icon icon-capcut" alt="CapCut"/> 
+                            <img src="./src/assets/svg/figma.svg" className="skill-icon icon-figma" alt="Figma"/> 
+                            <img src="./src/assets/svg/blender.svg" className="skill-icon icon-blender" alt="Blender"/> 
+                            <img src="./src/assets/svg/ps.svg" className="skill-icon icon-ps" alt="Photoshop"/> 
+                            <img src="./src/assets/svg/js2.svg" className="skill-icon icon-js" alt="JavaScript"/> 
+                            <img src="./src/assets/svg/html5.svg" className="skill-icon icon-html" alt="HTML5"/> 
+                            <img src="./src/assets/svg/css3.svg" className="skill-icon icon-css" alt="CSS3"/> 
+                            <img src="./src/assets/svg/csharp.svg" className="skill-icon icon-csharp" alt="C#"/> 
+                            <img src="./src/assets/svg/python.svg" className="skill-icon icon-python" alt="Python"/> 
                         </div>
                     </div>
                 </div>
 
-                <div className="BTC"> {/* Fixed: class -> className */}
+                <div className="BTC"> 
                     <h4 className="labels">Beyond the Code</h4>
                     <ul>
                         <li>Crochet & Crafting</li>

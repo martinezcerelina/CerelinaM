@@ -33,8 +33,8 @@ function Home() {
                             <button className="btn">Work With Me</button>
                         </a>
                         <a href="#projects-section">
-                            <button>View Projects</button>
-                        </a>
+                            <button className="btn-main">View Projects</button>
+                        </a> 
                     </div>
 
                     <div className="socials">

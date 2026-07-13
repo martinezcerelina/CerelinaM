@@ -162,6 +162,14 @@ function Project() {
 
             {activeCategory === 'graphic' && (
                 <div className="reel-wrapper">
+                    <button 
+                        className="reel-arrow reel-arrow--left" 
+                        onClick={() => setCurrentActive((prev) => (prev - 1 + totalCards) % totalCards)}
+                        aria-label="Previous project"
+                    >
+                        <img src="./src/assets/svg/arrow.svg" alt="previous" />
+                    </button>
+
                     <div 
                         className="reel-stage" 
                         id="reel-stage"
@@ -185,6 +193,14 @@ function Project() {
                             );
                         })}
                     </div>
+
+                    <button 
+                        className="reel-arrow reel-arrow--right" 
+                        onClick={() => setCurrentActive((prev) => (prev + 1) % totalCards)}
+                        aria-label="Next project"
+                    >
+                        <img src="./src/assets/svg/arrow.svg" alt="next" />
+                    </button>
                 </div>
             )}
 
