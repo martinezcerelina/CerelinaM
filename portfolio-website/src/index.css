@@ -73,14 +73,77 @@ html, body {
 }
 
 /* HEADER */
-header { margin: 32px 32px; display: flex; justify-content: space-between; }
-nav { display: flex; margin-left: auto; margin-right: auto; gap: 75px; }
-nav a { color: var(--white);  text-decoration: none; font-family: "Orbitron"; font-size: 15px; padding-top: 14px; padding-bottom: 15px; }
-#logo-container { display: flex;  color: #FF007F; font-family: "Syne"; }
-#logo-container img { padding-right: 8px; }
-#logo-container h3 { padding-top: 11px; padding-bottom: 11px; margin: 0; font-family: "Syne"; }
-#CV { padding-top: 6.5px; padding-bottom: 6.5px; width: 166px; height: 35px; }
+header { 
+  margin: 32px 32px; 
+  display: flex; 
+  justify-content: space-between; 
+}
+nav { 
+  display: flex; 
+  margin-left: auto; 
+  margin-right: auto; 
+  gap: 75px; 
+}
+nav a { 
+  color: rgba(255, 255, 255, 0.5);  
+  text-decoration: none; 
+  font-family: "Orbitron"; 
+  font-size: 14px; 
+  padding-top: 14px; 
+  padding-bottom: 4px; 
+  transition: color 0.2s;
+  position: relative;
+  height: fit-content;
+}
 
+#logo-container { 
+  display: flex;  
+  color: #FF007F; 
+  font-family: "Syne"; 
+}
+#logo-container img { 
+  padding-right: 8px; 
+}
+#logo-container h3 { 
+  padding-top: 11px; 
+  padding-bottom: 11px; 
+  margin: 0; 
+  font-family: "Syne"; 
+}
+#CV { 
+  padding: 6.5px 0 6.5px 0;
+  width: 166px; 
+  height: 35px; 
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: var(--yellow);
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--white);
+}
+
+nav a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+nav a.active {
+  color: var(--pink);
+}
+
+nav a.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
 
 .btn-main {
   color: var(--pink); 
