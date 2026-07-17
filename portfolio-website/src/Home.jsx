@@ -32,7 +32,11 @@ function Home() {
                         <a href="#contact-section">
                             <button className="btn">Work With Me</button>
                         </a>
-                        <a href="#projects-section">
+                        <a href="#projects-section" className="btn-wrapper">
+                            <span className="btn-star btn-star--1"><img src="./src/assets/svg/star-yellow.svg" alt="" /></span>
+                            <span className="btn-star btn-star--2"><img src="./src/assets/svg/star.svg" alt="" /></span>
+                            <span className="btn-star btn-star--3"><img src="./src/assets/svg/star-yellow.svg" alt="" /></span>
+                            <span className="btn-star btn-star--4"><img src="./src/assets/svg/star.svg" alt="" /></span>
                             <button className="btn-main">View Projects</button>
                         </a> 
                     </div>

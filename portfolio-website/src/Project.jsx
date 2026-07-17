@@ -251,7 +251,11 @@ function Project() {
                 </div>
             )}
 
-            <div className="view-all-wrapper">
+            <div className="view-all-wrapper btn-wrapper">
+                    <span className="btn-star btn-star--1"><img src="./src/assets/svg/star-yellow.svg" alt="" /></span>
+                    <span className="btn-star btn-star--2"><img src="./src/assets/svg/star.svg" alt="" /></span>
+                    <span className="btn-star btn-star--3"><img src="./src/assets/svg/star-yellow.svg" alt="" /></span>
+                    <span className="btn-star btn-star--4"><img src="./src/assets/svg/star.svg" alt="" /></span>
                 <a href="#"><button className="button-3">View All Projects</button></a>
             </div>
 
@@ -286,7 +290,7 @@ function Project() {
                             <div className="modal-actions">
                                 {selectedProject.category === 'web' && (
                                     <>
-                                        <button className="button-2" onClick={handleViewWebsite}>
+                                        <button className="button-2 btn-main" onClick={handleViewWebsite}>
                                             <img src='./src/assets/svg/arrow (2).svg' className="svg"/>
                                             <p>View Website</p>
                                         </button>
@@ -299,7 +303,7 @@ function Project() {
 
                                 {selectedProject.category === 'anim' && (
                                     <>
-                                        <button className="button-2" onClick={handleViewAnimation}>
+                                        <button className="btn-main" onClick={handleViewAnimation}>
                                             ▶ View Animation
                                         </button>
                                         <button className="modal-close-btn" onClick={closeModal}>

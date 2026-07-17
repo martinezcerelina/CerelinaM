@@ -86,7 +86,11 @@ function Certificates() {
                             </div>
 
                             <div className="modal-actions">
-                                <button className="button-2"  onClick={handleVerifyCertificate}>
+                                <button className="button-2 btn-main btn-wrapper"  onClick={handleVerifyCertificate}>
+                                    <span className="btn-star btn-star--1"><img src="./src/assets/svg/star-yellow.svg" alt="" /></span>
+                                    <span className="btn-star btn-star--2"><img src="./src/assets/svg/star.svg" alt="" /></span>
+                                    <span className="btn-star btn-star--3"><img src="./src/assets/svg/star-yellow.svg" alt="" /></span>
+                                    <span className="btn-star btn-star--4"><img src="./src/assets/svg/star.svg" alt="" /></span>
                                     <img src="./src/assets/svg/verify.svg" className="svg"/>
                                     <p>Verify Certificate</p>
                                 </button>

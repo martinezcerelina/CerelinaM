@@ -20,7 +20,11 @@ function Header() {
             </nav>
 
             <div id="CV">
-                <a href="/files/CerelinaMartinez_CV.pdf" download="CerelinaMartinez_CV.pdf">
+                <a href="/files/CerelinaMartinez_CV.pdf" download="CerelinaMartinez_CV.pdf" className="btn-wrapper">
+                    <span className="btn-star btn-star--1"><img src="./src/assets/svg/star-yellow.svg" alt="" /></span>
+                    <span className="btn-star btn-star--2"><img src="./src/assets/svg/star.svg" alt="" /></span>
+                    <span className="btn-star btn-star--3"><img src="./src/assets/svg/star-yellow.svg" alt="" /></span>
+                    <span className="btn-star btn-star--4"><img src="./src/assets/svg/star.svg" alt="" /></span>
                     <button className="btn-main">Download CV</button>
                 </a>
             </div>

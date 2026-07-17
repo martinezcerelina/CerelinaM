@@ -101,8 +101,13 @@ function Contact() {
                         <label className="form-label" htmlFor="message">Message:</label>
                         <textarea className="form-textarea" placeholder="Value" id="message" name="message" required></textarea>
                     </div>
-                    <div className="form-send-wrap">
-                        <button type="submit">Send Message</button>
+                    
+                    <div className="form-send-wrap btn-wrapper">
+                        <span className="btn-star btn-star--1"><img src="./src/assets/svg/star-yellow.svg" alt="" /></span>
+                        <span className="btn-star btn-star--2"><img src="./src/assets/svg/star.svg" alt="" /></span>
+                        <span className="btn-star btn-star--3"><img src="./src/assets/svg/star-yellow.svg" alt="" /></span>
+                        <span className="btn-star btn-star--4"><img src="./src/assets/svg/star.svg" alt="" /></span>
+                        <button type="submit" className="btn-main">Send Message</button>
                     </div>
                 </form>
             </div>

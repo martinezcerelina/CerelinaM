@@ -92,6 +92,81 @@ nav a { color: var(--white);  text-decoration: none; font-family: "Orbitron"; fo
   font-family: "Orbitron";
   border-radius: 100px;
 }
+.btn-wrapper {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-star {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0) rotate(0deg) translateY(-15px);
+  transition: opacity 0.2s ease, transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* that cubic-bezier is a "bounce/overshoot" curve — it scales past 100% then settles back, like a sticker plopping down */
+  z-index: 2;
+}
+
+.btn-star img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.btn-star--1 {
+  width: 20px;
+  height: 20px;
+  top: -14px;
+  right: -14px;
+}
+
+.btn-star--2 {
+  width: 14px;
+  height: 14px;
+  bottom: -12px;
+  right: 20px;
+  transition-delay: 0.06s;
+}
+
+.btn-star--3 {
+  width: 20px;
+  height: 20px;
+  bottom: -14px;
+  left: -14px;
+  transition-delay: 0.12s;
+}
+
+.btn-star--4 {
+  width: 16px;
+  height: 16px;
+  top: -12px;
+  left: 20px;
+  transition-delay: 0.18s;
+}
+
+.btn-wrapper:hover .btn-star--1 {
+  opacity: 1;
+  transform: scale(1) rotate(-14deg) translateY(0);
+}
+.btn-wrapper:hover .btn-star--2 {
+  opacity: 1;
+  transform: scale(1) rotate(10deg) translateY(0);
+}
+.btn-wrapper:hover .btn-star--3 {
+  opacity: 1;
+  transform: scale(1) rotate(7deg) translateY(0);
+}
+.btn-wrapper:hover .btn-star--4 {
+  opacity: 1;
+  transform: scale(1) rotate(-9deg) translateY(0);
+}
+
+.btn-wrapper:hover .btn-main{
+  transform: scale(1.03) rotate(-1deg);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
 
 /* HOME */
 #home-container { display: flex; justify-content: center; max-width: 1100px; margin: 0 auto; }
@@ -142,7 +217,7 @@ nav a { color: var(--white);  text-decoration: none; font-family: "Orbitron"; fo
   margin: auto;
 }
 .left {
-  max-width: 500px;
+ max-width: 500px;
 }
 .aboutme {
   margin-top: 100px;
@@ -312,7 +387,7 @@ nav a { color: var(--white);  text-decoration: none; font-family: "Orbitron"; fo
 
 
 
-
+/* CERTIFICATES */
 #certificates-section {
   margin-top: 100px;
   margin-bottom: 50px;
@@ -330,7 +405,6 @@ nav a { color: var(--white);  text-decoration: none; font-family: "Orbitron"; fo
   max-width: 1100px;
   margin: 0 auto;
 }
-
 
 .card {
     position: relative;
@@ -614,6 +688,9 @@ nav a { color: var(--white);  text-decoration: none; font-family: "Orbitron"; fo
 
 
 .modal-close-btn:hover, .btn:hover {
+  transform: scale(1.03) rotate(-1deg);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
   background: rgba(255, 0, 127, 0.1);
 }
 
@@ -623,18 +700,16 @@ nav a { color: var(--white);  text-decoration: none; font-family: "Orbitron"; fo
   
 }
 
+
 .button-2 {
   align-items: center;
   justify-content: center;
   margin: auto;
   display: flex;
-
 }
-
 .button-2 img, .button-2 p {
 margin: auto 0;
 }
-
 
 
 @media (max-width: 700px) {
@@ -881,7 +956,7 @@ margin: auto 0;
 }
 
 .view-all-wrapper {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   max-width: 1100px;
   margin: 30px auto 0 auto;
@@ -1004,7 +1079,7 @@ margin: auto 0;
   gap: 12px;
 }
 
-.form-send-wrap { text-align: center; margin-top: 20px; }
+.form-send-wrap { text-align: center; margin-top: 20px; justify-content: center;}
 
 .btn-send {
   padding: 12px 40px;
