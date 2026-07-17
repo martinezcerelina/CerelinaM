@@ -578,27 +578,27 @@ nav a.active::after {
 } */
 
 .card-body  {
-  padding: 12px 14px ;
+  padding: 14px 14px ;
   background-color: #0D0010;
   text-align: center;
   object-fit: cover; 
   object-position: top center;
 }
 
-.card-body p {
-  font-family: "Michroma";
-  font-weight: normal;
-  padding-bottom: 12px;
+.card-description {
+  font-size: 12px;
+  font-family: "SpaceGrotesk";
+  padding:  0 12px 12px;
+  text-align: left;
 }
 
 .card-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 11px; 
-  font-weight: 800;
+  font-family: "Michroma";
+  font-weight: normal;
+  font-size: 12px; 
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 4px; 
-  padding: 0 15px;
+  padding: 0 12px 15px;
 }
 
 .card-btn {
@@ -750,10 +750,9 @@ nav a.active::after {
 }
 
 
-.modal-close-btn:hover, .btn:hover {
+.modal-close-btn:hover, .btn:hover, .card-btn:hover{
   transform: scale(1.03) rotate(-1deg);
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-
   background: rgba(255, 0, 127, 0.1);
 }
 
