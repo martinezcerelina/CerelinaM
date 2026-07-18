@@ -8,7 +8,6 @@ import ps5 from '../public/Photoshop5.jpg';
 
 const carouselImages = [ps1, ps2, ps3, ps4, ps5];
 
-// Add modal details for each project card
 const webProjects = [
     {
         id: 1,
@@ -73,8 +72,6 @@ function Project() {
     const [currentActive, setCurrentActive] = useState(2);
     const [screenWidth, setScreenWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
     const [activeCategory, setActiveCategory] = useState('graphic');
-    
-    // Modal state
     const [selectedProject, setSelectedProject] = useState(null);
 
     const totalCards = carouselImages.length;
@@ -126,7 +123,7 @@ function Project() {
 
     return (
         <section id="projects-section">
-            <div className="proj-title">
+            <div className="proj-title pop-item" style={{ '--pop-delay': '0s', '--pop-rot': '-4deg' }}>
                 <h2 className="projects-title">
                     Pro
                     <span className="letter-wrap">
@@ -139,7 +136,7 @@ function Project() {
                 </h2>
             </div>
 
-            <div className="cat-tabs reveal" style={{ transitionDelay: '.1s' }}>
+            <div className="cat-tabs reveal pop-item" style={{ transitionDelay: '.1s', '--pop-delay': '0.15s', '--pop-rot': '3deg' }}>
                 <button 
                     className={`cat-tab ${activeCategory === 'graphic' ? 'active' : ''}`} 
                     onClick={() => handleFilterCat('graphic')}
@@ -161,7 +158,7 @@ function Project() {
             </div>
 
             {activeCategory === 'graphic' && (
-                <div className="reel-wrapper">
+                <div className="reel-wrapper pop-item" style={{ '--pop-delay': '0.3s', '--pop-rot': '-2deg' }}>
                     <button 
                         className="reel-arrow reel-arrow--left" 
                         onClick={() => setCurrentActive((prev) => (prev - 1 + totalCards) % totalCards)}
@@ -206,8 +203,16 @@ function Project() {
 
             {activeCategory === 'web' && (
                 <div className="proj-grid">
-                    {webProjects.map((project) => (
-                        <div className="card reveal" style={{ transitionDelay: '.05s' }} key={project.id}>
+                    {webProjects.map((project, index) => (
+                        <div 
+                            className="card reveal pop-item" 
+                            style={{ 
+                                transitionDelay: '.05s',
+                                '--pop-delay': `${0.3 + index * 0.12}s`,
+                                '--pop-rot': `${(index % 2 === 0 ? -1 : 1) * (4 + index * 2)}deg`
+                            }} 
+                            key={project.id}
+                        >
                             <span className="card-star card-star--lg"><img src="./src/assets/svg/star.svg" alt="star" /></span>
                             <span className="card-star card-star--md"><img src="./src/assets/svg/star.svg" alt="star" /></span>
                             <span className="card-star card-star--sm"><img src="./src/assets/svg/star.svg" alt="star" /></span>
@@ -220,7 +225,6 @@ function Project() {
                                 <div className="card-body">
                                     <p className="card-title">{project.title}</p>
                                     <p className="card-description">{project.description}</p>
-                                    
                                     <button className="card-btn" onClick={() => openModal(project)}>View</button>
                                 </div>
                             </div>
@@ -231,8 +235,16 @@ function Project() {
 
             {activeCategory === 'anim' && (
                 <div className="proj-grid">
-                    {animProjects.map((project) => (
-                        <div className="card reveal" style={{ transitionDelay: '.05s' }} key={project.id}>
+                    {animProjects.map((project, index) => (
+                        <div 
+                            className="card reveal pop-item" 
+                            style={{ 
+                                transitionDelay: '.05s',
+                                '--pop-delay': `${0.3 + index * 0.12}s`,
+                                '--pop-rot': `${(index % 2 === 0 ? -1 : 1) * (4 + index * 2)}deg`
+                            }} 
+                            key={project.id}
+                        >
                             <span className="card-star card-star--lg"><img src="./src/assets/svg/star.svg" alt="star" /></span>
                             <span className="card-star card-star--md"><img src="./src/assets/svg/star.svg" alt="star" /></span>
                             <span className="card-star card-star--sm"><img src="./src/assets/svg/star.svg" alt="star" /></span>
@@ -247,21 +259,21 @@ function Project() {
                                     <button className="card-btn" onClick={() => openModal(project)}>View</button>
                                 </div>
                             </div>
-
                         </div>
                     ))}
                 </div>
             )}
 
-            <div className="view-all-wrapper btn-wrapper">
+            <div className="view-all-wrapper pop-item" style={{ '--pop-delay': '0.8s', '--pop-rot': '5deg' }}>
+                <a href="#" className="btn-wrapper">
                     <span className="btn-star btn-star--1"><img src="./src/assets/svg/star-yellow.svg" alt="" /></span>
                     <span className="btn-star btn-star--2"><img src="./src/assets/svg/star.svg" alt="" /></span>
                     <span className="btn-star btn-star--3"><img src="./src/assets/svg/star-yellow.svg" alt="" /></span>
                     <span className="btn-star btn-star--4"><img src="./src/assets/svg/star.svg" alt="" /></span>
-                <a href="#"><button className="button-3">View All Projects</button></a>
+                    <button className="button-3">View All Projects</button>
+                </a>
             </div>
 
-            {/* Project Viewer Modal */}
             {selectedProject && (
                 <div className="modal-overlay" onClick={closeModal}>
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>

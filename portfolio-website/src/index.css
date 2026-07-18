@@ -226,7 +226,7 @@ nav a.active::after {
   transform: scale(1) rotate(-9deg) translateY(0);
 }
 
-.btn-wrapper:hover .btn-main{
+.btn-wrapper:hover .btn-main, .button-3:hover{
   transform: scale(1.03) rotate(-1deg);
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -263,6 +263,58 @@ nav a.active::after {
 .socials img { width: 40px; height: 40px; margin-top: 32px; }
 .socials { display: flex; justify-content: right; gap: 20px; }
 .linkedin { background-color: #FFD558; border-radius: 100%; }
+
+.socials a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.socials a:hover {
+  transform: translateY(-6px);
+}
+
+
+/* Default state: pop-items are invisible/scaled down until the animation plays */
+.pop-item {
+  opacity: 1; /* stays visible normally when just scrolled to naturally */
+}
+
+/* Only animate when the parent section has .scrapbook-pop applied */
+.scrapbook-pop .pop-item {
+  animation: scrapbook-drop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: var(--pop-delay, 0s);
+}
+
+@keyframes scrapbook-drop {
+  0% {
+    opacity: 0;
+    transform: 
+      translateY(-40px) 
+      scale(0.5) 
+      rotate(var(--pop-rot, 0deg));
+  }
+  60% {
+    opacity: 1;
+    transform: 
+      translateY(6px) 
+      scale(1.05) 
+      rotate(calc(var(--pop-rot, 0deg) * -0.4));
+  }
+  100% {
+    opacity: 1;
+    transform: 
+      translateY(0) 
+      scale(1) 
+      rotate(0deg);
+  }
+}
+
+
+
+
+
+
+
 
 /* DIVIDER */
 .divider { position: relative; height: 77px; }
@@ -750,7 +802,7 @@ nav a.active::after {
 }
 
 
-.modal-close-btn:hover, .btn:hover, .card-btn:hover{
+.modal-close-btn:hover, .btn:hover, .card-btn:hover{ 
   transform: scale(1.03) rotate(-1deg);
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   background: rgba(255, 0, 127, 0.1);
@@ -1018,7 +1070,7 @@ margin: auto 0;
 }
 
 .view-all-wrapper {
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   max-width: 1100px;
   margin: 30px auto 0 auto;
@@ -1141,7 +1193,7 @@ margin: auto 0;
   gap: 12px;
 }
 
-.form-send-wrap { text-align: center; margin-top: 20px; justify-content: center;}
+.form-send-wrap { text-align: center; margin-top: 20px; }
 
 .btn-send {
   padding: 12px 40px;

@@ -2,7 +2,7 @@ function About() {
     return (
         <section id="aboutme-section">
             <div className="left">
-                <div className="aboutme">
+                <div className="aboutme pop-item" style={{ '--pop-delay': '0.1s', '--pop-rot': '-4deg' }}>
                     <span className="deco-star deco-star--pink about-star-1"><img src="./src/assets/svg/star.svg" alt="star" /></span>
                     <span className="deco-star deco-star--pink about-star-2"><img src="./src/assets/svg/star-yellow.svg" alt="star" /></span>
                     <span className="deco-star deco-star--yellow about-star-3"><img src="./src/assets/svg/star-yellow.svg" alt="star" /></span>
@@ -16,7 +16,7 @@ function About() {
                     </p>
                 </div>
 
-                <div className="education">
+                <div className="education pop-item" style={{ '--pop-delay': '0.25s', '--pop-rot': '3deg' }}>
                     <h4 className="labels">Education</h4>
                     <ul>
                         <li>Pamantasan Ng Lungsod Ng Valenzuela</li>
@@ -27,7 +27,7 @@ function About() {
                     </ul>
                 </div>
 
-                <div className="CFO">
+                <div className="CFO pop-item" style={{ '--pop-delay': '0.4s', '--pop-rot': '-2deg' }}>
                     <h4 className="labels">Currently Focused On</h4> 
                     <ul>
                         <li>Develop engaging multimedia content through 2D animation and digital drawing.</li>
@@ -37,7 +37,7 @@ function About() {
             </div>
 
             <div className="right">
-                <div className="skills-container"> 
+                <div className="skills-container pop-item" style={{ '--pop-delay': '0.3s', '--pop-rot': '5deg' }}> 
                     <div className="board-wrapper"> 
                         <span className="deco-star deco-star--pink board-star"><img src="./src/assets/svg/star.svg" alt="star" /></span>
                         <span className="deco-moon board-moon"><img src="./src/assets/svg/moon-yellow.svg" alt="moon" /></span>
@@ -63,7 +63,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="BTC"> 
+                <div className="BTC pop-item" style={{ '--pop-delay': '0.5s', '--pop-rot': '-3deg' }}> 
                     <h4 className="labels">Beyond the Code</h4>
                     <ul>
                         <li>Crochet & Crafting</li>

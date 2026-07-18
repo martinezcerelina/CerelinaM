@@ -1,9 +1,8 @@
-
 function Home() {
     return (
         <section id="home-container">
             <div className="home-container">
-                <div className="CerelinaPicture">
+                <div className="CerelinaPicture pop-item" style={{ '--pop-delay': '0.1s', '--pop-rot': '-6deg' }}>
 
                     <span className="deco-star deco-star--yellow"><img src="./src/assets/svg/star-yellow.svg" alt="star" /></span> 
                     <span className="deco-star deco-star--pink"><img src="./src/assets/svg/star.svg" alt="star" /></span> 
@@ -17,18 +16,18 @@ function Home() {
                 </div>
 
                 <div className="infos">
-                    <div className="name">
+                    <div className="name pop-item" style={{ '--pop-delay': '0.2s', '--pop-rot': '3deg' }}>
                         <h2>Hello! I am</h2>
                         <h1>Cerelina Martinez</h1>
                     </div>
-                    <h3 className="h3">ASPIRING WEB DEVELOPER</h3>
-                    <p>
+                    <h3 className="h3 pop-item" style={{ '--pop-delay': '0.3s', '--pop-rot': '-2deg' }}>ASPIRING WEB DEVELOPER</h3>
+                    <p className="pop-item" style={{ '--pop-delay': '0.4s', '--pop-rot': '2deg' }}>
                         IT student and aspiring web developer dedicated to building high-performance web 
                         systems. From interface design to structured backend logic, I bring your
                         digital projects to life with precision and modern functionality.
                     </p>
 
-                    <div className="buttons">
+                    <div className="buttons pop-item" style={{ '--pop-delay': '0.5s', '--pop-rot': '-4deg' }}>
                         <a href="#contact-section">
                             <button className="btn">Work With Me</button>
                         </a>
@@ -41,7 +40,7 @@ function Home() {
                         </a> 
                     </div>
 
-                    <div className="socials">
+                    <div className="socials pop-item" style={{ '--pop-delay': '0.6s', '--pop-rot': '5deg' }}>
                         <a href="https://www.instagram.com/cerielleee?igsh=amxlbDV0ejR5dDVp" target="_blank"><img src="./src/assets/svg/ig.svg" alt="Instagram" className="ig" /></a>
                         <a href="https://www.facebook.com/share/19KgTiDhRS/" target="_blank"><img src="./src/assets/svg/fb.svg" alt="Facebook" className="fb" /></a>
                         <a href="https://t.me/luvyowwwww" target="_blank"><img src="./src/assets/svg/tg.svg" alt="Telegram" className="tg" /></a>
