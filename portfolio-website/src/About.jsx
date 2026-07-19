@@ -1,6 +1,10 @@
+import useScrapbookReveal from './useScrapbookReveal.js';
+
 function About() {
+    const sectionRef = useScrapbookReveal();
+
     return (
-        <section id="aboutme-section">
+        <section id="aboutme-section" ref={sectionRef}>
             <div className="left">
                 <div className="aboutme pop-item" style={{ '--pop-delay': '0.1s', '--pop-rot': '-4deg' }}>
                     <span className="deco-star deco-star--pink about-star-1"><img src="./src/assets/svg/star.svg" alt="star" /></span>

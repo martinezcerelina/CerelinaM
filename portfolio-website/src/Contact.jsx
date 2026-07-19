@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import TargetDateField from './TargetDateField';
+import useScrapbookReveal from './useScrapbookReveal.js';
+
 
 function Contact() {
+    const sectionRef = useScrapbookReveal();
+
     const [view, setView] = useState('weekly');
 
     const toggleCalPopover = (e) => {
@@ -25,23 +29,23 @@ function Contact() {
     };
 
     return (
-        <section id="contact-section">
+        <section id="contact-section" ref={sectionRef}>
             <div className="left-contact">
-                <div className="title pop-item" style={{ '--pop-delay': '0s', '--pop-rot': '-6deg' }}>
+                <div className="title pop-item" style={{ '--pop-delay': '0.3s', '--pop-rot': '-6deg' }}>
                     <h1>Contact Me</h1>    
                 </div>
-                <h4 className="pop-item" style={{ '--pop-delay': '0.1s', '--pop-rot': '4deg' }}>
+                <h4 className="pop-item" style={{ '--pop-delay': '0.3s', '--pop-rot': '4deg' }}>
                     Let's build something great together.
                 </h4>
-                <p className="pop-item" style={{ '--pop-delay': '0.2s', '--pop-rot': '-3deg' }}>
+                <p className="pop-item" style={{ '--pop-delay': '0.4s', '--pop-rot': '-3deg' }}>
                     Looking for collaboration or a creative partner? My inbox is always open for project discussions or tech-focused conversations. Feel free to reach out.
                 </p>
                 <div className="socials-vertical">
-                    <div className="social pop-item" style={{ '--pop-delay': '0.3s', '--pop-rot': '-7deg' }}>
+                    <div className="social pop-item" style={{ '--pop-delay': '0.5s', '--pop-rot': '-7deg' }}>
                         <img src="./src/assets/svg/gmail.svg" className="gmail" alt="Gmail"/>
                         <p>cerelinamartinez3@gmail.com</p>
                     </div>
-                    <div className="social pop-item" style={{ '--pop-delay': '0.38s', '--pop-rot': '6deg' }}>
+                    <div className="social pop-item" style={{ '--pop-delay': '0.48s', '--pop-rot': '6deg' }}>
                         <img src="./src/assets/svg/fb.svg" className="fb" alt="Facebook" />
                         <p>Cerelina Martinez</p>
                     </div>
@@ -56,7 +60,7 @@ function Contact() {
                 </div>
             </div>
 
-            <div className="right-contact pop-item" style={{ '--pop-delay': '0.25s', '--pop-rot': '5deg' }}>
+            <div className="right-contact pop-item" style={{ '--pop-delay': '0.5s', '--pop-rot': '5deg' }}>
                 <form onSubmit={(e) => e.preventDefault()}>
                     <div className="form-group">
                         <label className="form-label" htmlFor="full-name">Full Name:</label>

@@ -1,6 +1,10 @@
+import useScrapbookReveal from './useScrapbookReveal.js';
+
 function Home() {
+    const sectionRef = useScrapbookReveal();
+    
     return (
-        <section id="home-container">
+        <section id="home-container" ref={sectionRef}>
             <div className="home-container">
                 <div className="CerelinaPicture pop-item" style={{ '--pop-delay': '0.1s', '--pop-rot': '-6deg' }}>
 

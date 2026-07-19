@@ -1,4 +1,3 @@
-// useScrapbookReveal.js
 import { useEffect, useRef } from 'react';
 
 function useScrapbookReveal(options = {}) {
@@ -13,9 +12,8 @@ function useScrapbookReveal(options = {}) {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        // Force replay: remove then re-add the class
                         el.classList.remove('scrapbook-pop');
-                        void el.offsetWidth; // force reflow
+                        void el.offsetWidth; // force reflow so removing+re-adding actually replays the animation
                         el.classList.add('scrapbook-pop');
 
                         if (once) observer.unobserve(el);

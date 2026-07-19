@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import useScrapbookReveal from './useScrapbookReveal.js';
+
 
 import ps1 from '../public/Photoshop1.jpg';
 import ps2 from '../public/Photoshop2.jpg';
@@ -69,6 +71,8 @@ const animProjects = [
 ];
 
 function Project() {
+    const sectionRef = useScrapbookReveal();
+
     const [currentActive, setCurrentActive] = useState(2);
     const [screenWidth, setScreenWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
     const [activeCategory, setActiveCategory] = useState('graphic');
@@ -122,8 +126,8 @@ function Project() {
     };
 
     return (
-        <section id="projects-section">
-            <div className="proj-title pop-item" style={{ '--pop-delay': '0s', '--pop-rot': '-4deg' }}>
+        <section id="projects-section" ref={sectionRef}>
+            <div className="proj-title pop-item" style={{ '--pop-delay': '0.3s', '--pop-rot': '-4deg' }}>
                 <h2 className="projects-title">
                     Pro
                     <span className="letter-wrap">
