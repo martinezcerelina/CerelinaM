@@ -72,6 +72,7 @@ html, body {
   padding: 0;
 }
 
+
 /* HEADER */
 header { 
   margin: 32px 32px; 
@@ -1212,13 +1213,7 @@ margin: auto 0;
 }
 .btn-send:hover { opacity: 0.88; transform: translateY(-2px); }
 
-/* Decorative moon bottom-right of form */
-.form-deco-moon {
-  position: absolute; bottom: -30px; right: -20px;
-  width: 60px; height: 60px; fill: var(--yellow); opacity: 0.5;
-}
-
-.form-status {
+/* .form-status {
   font-family: 'SpaceGrotesk';
   font-size: 13px;
   margin-top: 12px;
@@ -1229,8 +1224,51 @@ margin: auto 0;
 }
 .form-status.error {
   color: #f87171;
+} */
+
+
+.form-moon {
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 55px;
+  height: 55px;
+  z-index: 3;
+  transform:rotate(10deg);
 }
 
+.form-star-1 {
+  position: absolute;
+  top: -35px;
+  left: 25px;
+  width: 22px;
+  height: 22px;
+  transform:rotate(30deg);
+}
+
+.form-star-2 {
+  position: absolute;
+  top: 480px;
+  bottom: -15px;
+  left: 510px;
+  width: 55px;
+  height: 55px;
+  transform:rotate(10deg);
+}
+
+.form-star-3 {
+  position: absolute;
+  top: 450px;
+  bottom: -15px;
+  right: -40px;
+  width: 18px;
+  height: 18px;
+  transform:rotate(-10deg);
+}
+
+
+
+/* FOOTER */
 footer {
     background: rgba(255, 0, 127, 0.20);
     padding: 40px 60px;
@@ -1248,38 +1286,3 @@ footer {
     text-align: center;
     margin: 0;
 }
-
-/* ── Decorative stars & moon ── */
-/* Add these to your HTML inside <footer>:
-   <img src="/svg/star4.svg" class="footer-deco footer-star-1" alt="">
-   <img src="/svg/star4.svg" class="footer-deco footer-star-2" alt="">
-   <img src="/svg/star4.svg" class="footer-deco footer-star-3" alt="">
-   <img src="/svg/moon-yellow.svg" class="footer-deco footer-moon" alt=""> */
-
-
-.footer-deco {
-    position: absolute;
-    pointer-events: none;
-    opacity: 0.9;
-}
-
-.footer-star-1 {
-    width: 22px; height: 22px;
-    top: 28px; left: 18%;
-}
-
-.footer-star-2 {
-    width: 32px; height: 32px;
-    top: 60px; left: 14%;
-}
-
-.footer-star-3 {
-    width: 20px; height: 20px;
-    top: 32px; right: 16%;
-}
-
-.footer-moon {
-    width: 48px; height: 48px;
-    bottom: 28px; right: 8%;
-}
-

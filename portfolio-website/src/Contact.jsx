@@ -31,21 +31,21 @@ function Contact() {
     return (
         <section id="contact-section" ref={sectionRef}>
             <div className="left-contact">
-                <div className="title pop-item" style={{ '--pop-delay': '0.3s', '--pop-rot': '-6deg' }}>
+                <div className="title pop-item" style={{ '--pop-delay': '0s', '--pop-rot': '-6deg' }}>
                     <h1>Contact Me</h1>    
                 </div>
-                <h4 className="pop-item" style={{ '--pop-delay': '0.3s', '--pop-rot': '4deg' }}>
+                <h4 className="pop-item" style={{ '--pop-delay': '0.1s', '--pop-rot': '4deg' }}>
                     Let's build something great together.
                 </h4>
-                <p className="pop-item" style={{ '--pop-delay': '0.4s', '--pop-rot': '-3deg' }}>
+                <p className="pop-item" style={{ '--pop-delay': '0.2s', '--pop-rot': '-3deg' }}>
                     Looking for collaboration or a creative partner? My inbox is always open for project discussions or tech-focused conversations. Feel free to reach out.
                 </p>
                 <div className="socials-vertical">
-                    <div className="social pop-item" style={{ '--pop-delay': '0.5s', '--pop-rot': '-7deg' }}>
+                    <div className="social pop-item" style={{ '--pop-delay': '0.3s', '--pop-rot': '-7deg' }}>
                         <img src="./src/assets/svg/gmail.svg" className="gmail" alt="Gmail"/>
                         <p>cerelinamartinez3@gmail.com</p>
                     </div>
-                    <div className="social pop-item" style={{ '--pop-delay': '0.48s', '--pop-rot': '6deg' }}>
+                    <div className="social pop-item" style={{ '--pop-delay': '0.38s', '--pop-rot': '6deg' }}>
                         <img src="./src/assets/svg/fb.svg" className="fb" alt="Facebook" />
                         <p>Cerelina Martinez</p>
                     </div>
@@ -61,6 +61,11 @@ function Contact() {
             </div>
 
             <div className="right-contact pop-item" style={{ '--pop-delay': '0.5s', '--pop-rot': '5deg' }}>
+                 <span className="deco-moon form-moon"><img src="./src/assets/svg/moon.svg" alt="moon" /></span>
+                <span className="deco-star deco-star--yellow form-star-1"><img src="./src/assets/svg/star-yellow.svg" alt="star" /></span>
+                <span className="deco-star deco-star--pink form-star-2"><img src="./src/assets/svg/star.svg" alt="star" /></span>
+                <span className="deco-star deco-star--yellow form-star-3"><img src="./src/assets/svg/star-yellow.svg" alt="star" /></span>
+
                 <form onSubmit={(e) => e.preventDefault()}>
                     <div className="form-group">
                         <label className="form-label" htmlFor="full-name">Full Name:</label>
