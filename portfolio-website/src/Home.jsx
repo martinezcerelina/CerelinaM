@@ -6,7 +6,7 @@ function Home() {
     return (
         <section id="home-container" ref={sectionRef}>
             <div className="home-container">
-                <div className="CerelinaPicture pop-item" style={{ '--pop-delay': '0.1s', '--pop-rot': '-6deg' }}>
+                <div className="CerelinaPicture pop-item" style={{ '--pop-delay': '0', '--pop-rot': '-6deg' }}>
 
                     <span className="deco-star deco-star--yellow"><img src="./src/assets/svg/star-yellow.svg" alt="star" /></span> 
                     <span className="deco-star deco-star--pink"><img src="./src/assets/svg/star.svg" alt="star" /></span> 

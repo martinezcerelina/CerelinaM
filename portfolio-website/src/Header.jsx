@@ -27,27 +27,10 @@ function Header() {
     return () => observer.disconnect();
   }, []);
 
-  // Triggers the scrapbook pop-in animation on the target section
-  const handleNavClick = (e, targetId) => {
-    e.preventDefault();
-    const section = document.getElementById(targetId);
-    if (!section) return;
-
-    // Remove the class first (in case it's already there) to allow re-triggering
-    section.classList.remove('scrapbook-pop');
-    // Force a reflow so the browser "notices" the class was removed
-    void section.offsetWidth;
-    // Re-add the class to play the animation
-    section.classList.add('scrapbook-pop');
-
-    // Scroll to the section
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
   return (
     <header>
       <div id="logo-container">
-        <a href="#home-container" id="logo" onClick={(e) => handleNavClick(e, 'home-container')}>
+        <a href="#home-container" id="logo">
           <img
             src="./src/assets/logo.png"
             alt="CM Logo"
@@ -58,10 +41,10 @@ function Header() {
       </div>
 
       <nav>
-        <a href="#home-container" onClick={(e) => handleNavClick(e, 'home-container')}>HOME</a>
-        <a href="#aboutme-section" onClick={(e) => handleNavClick(e, 'aboutme-section')}>ABOUT</a>
-        <a href="#projects-section" onClick={(e) => handleNavClick(e, 'projects-section')}>PROJECTS</a>
-        <a href="#contact-section" onClick={(e) => handleNavClick(e, 'contact-section')}>CONTACTS</a>
+        <a href="#home-container">HOME</a>
+        <a href="#aboutme-section">ABOUT</a>
+        <a href="#projects-section">PROJECTS</a>
+        <a href="#contact-section">CONTACTS</a>
       </nav>
 
       <div id="CV">

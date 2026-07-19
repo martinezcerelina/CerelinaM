@@ -209,7 +209,7 @@ function Project() {
                 <div className="proj-grid">
                     {webProjects.map((project, index) => (
                         <div 
-                            className="card reveal pop-item" 
+                            className="card pop-item" 
                             style={{ 
                                 transitionDelay: '.05s',
                                 '--pop-delay': `${0.3 + index * 0.12}s`,
@@ -241,7 +241,7 @@ function Project() {
                 <div className="proj-grid">
                     {animProjects.map((project, index) => (
                         <div 
-                            className="card reveal pop-item" 
+                            className="card pop-item" 
                             style={{ 
                                 transitionDelay: '.05s',
                                 '--pop-delay': `${0.3 + index * 0.12}s`,
