@@ -14,7 +14,6 @@ h6 {font-size: 12px;}
 p {font-size: 14px;}
 
 #root {
-  /* overflow-x: hidden; */
   width: 100%;
   max-width: 100%;
 }
@@ -169,7 +168,6 @@ nav a.active::after {
   pointer-events: none;
   transform: scale(0) rotate(0deg) translateY(-15px);
   transition: opacity 0.2s ease, transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
-  /* that cubic-bezier is a "bounce/overshoot" curve — it scales past 100% then settles back, like a sticker plopping down */
   z-index: 2;
 }
 

@@ -16,8 +16,9 @@ const webProjects = [
         title: "DREAMY CRAFTS",
         image: "#",
         category: "web",
-        description: "A high-fidelity interactive experience combining modern web technologies with fluid 2D animations. This project focuses on seamless user transitions and responsive layouts optimized for high-performance rendering.",
-        tags: ["HTML/CSS", "React", "2D Animation", "GSAP"],
+        short_description: "An e-commerce web platform designed to showcase, catalog, and sell handmade artisanal crafts and customized products.",
+        description: "An e-commerce and showcase web platform designed for handmade crafts, customized items, and personalized gifts. It features an aesthetic, responsive product catalog, category filtering, and an interactive ordering/inquiry system tailored for creative small businesses.",
+        tags: ["HTML", "CSS", "Javascript"],
         websiteUrl: "https://example.com",
     },
     {
@@ -25,49 +26,50 @@ const webProjects = [
         title: "ALLOWANCE WISE",
         image: "#",
         category: "web",
-        description: "A high-fidelity interactive experience combining modern web technologies with fluid 2D animations. This project focuses on seamless user transitions and responsive layouts optimized for high-performance rendering.",
-        tags: ["HTML/CSS", "React", "2D Animation", "GSAP"],
+        short_description: "A student-centered personal budgeting and expense tracking web application built to cultivate better financial habits.",
+        description: "A student-focused personal budgeting and expense tracking web application built to help users manage daily allowances, monitor spending habits, set savings goals, and visualize financial records through a clean, structured dashboard.",
+        tags: ["HTML", "CSS", "Javascript", "MongoDB", "Node.js"],
         websiteUrl: "https://example.com",
-    },
-    {
-        id: 3,
-        title: "shcoks",
-        image: "#",
-        category: "web",
-        description: "A high-fidelity interactive experience combining modern web technologies with fluid 2D animations. This project focuses on seamless user transitions and responsive layouts optimized for high-performance rendering.",
-        tags: ["HTML/CSS", "React", "2D Animation", "GSAP"],
-        websiteUrl: "https://example.com",
-    },
+    }
+    // {
+    //     id: 3,
+    //     title: "shcoks",
+    //     image: "#",
+    //     category: "web",
+    //     description: "A high-fidelity interactive experience combining modern web technologies with fluid 2D animations. This project focuses on seamless user transitions and responsive layouts optimized for high-performance rendering.",
+    //     tags: ["HTML/CSS", "React", "2D Animation", "GSAP"],
+    //     websiteUrl: "https://example.com",
+    // },
 ];
 
 const animProjects = [
-    {
-        id: 4,
-        title: "ALLOWANCE WISE",
-        image: "#",
-        category: "anim",
-        description: "A high-fidelity interactive experience combining modern web technologies with fluid 2D animations.",
-        tags: ["2D Animation", "After Effects"],
-        animationUrl: "https://example.com/animation",
-    },
-    {
-        id: 5,
-        title: "ALLOWANCE WISE",
-        image: "#",
-        category: "anim",
-        description: "A high-fidelity interactive experience combining modern web technologies with fluid 2D animations.",
-        tags: ["2D Animation", "After Effects"],
-        animationUrl: "https://example.com/animation",
-    },
-    {
-        id: 6,
-        title: "ALLOWANCE WISE",
-        image: "#",
-        category: "anim",
-        description: "A high-fidelity interactive experience combining modern web technologies with fluid 2D animations.",
-        tags: ["2D Animation", "After Effects"],
-        animationUrl: "https://example.com/animation",
-    },
+    // {
+    //     id: 4,
+    //     title: "ALLOWANCE WISE",
+    //     image: "#",
+    //     category: "anim",
+    //     description: "A high-fidelity interactive experience combining modern web technologies with fluid 2D animations.",
+    //     tags: ["2D Animation", "After Effects"],
+    //     animationUrl: "https://example.com/animation",
+    // },
+    // {
+    //     id: 5,
+    //     title: "ALLOWANCE WISE",
+    //     image: "#",
+    //     category: "anim",
+    //     description: "A high-fidelity interactive experience combining modern web technologies with fluid 2D animations.",
+    //     tags: ["2D Animation", "After Effects"],
+    //     animationUrl: "https://example.com/animation",
+    // },
+    // {
+    //     id: 6,
+    //     title: "ALLOWANCE WISE",
+    //     image: "#",
+    //     category: "anim",
+    //     description: "A high-fidelity interactive experience combining modern web technologies with fluid 2D animations.",
+    //     tags: ["2D Animation", "After Effects"],
+    //     animationUrl: "https://example.com/animation",
+    // },
 ];
 
 function Project() {
@@ -228,7 +230,7 @@ function Project() {
                                 </div>
                                 <div className="card-body">
                                     <p className="card-title">{project.title}</p>
-                                    <p className="card-description">{project.description}</p>
+                                    <p className="card-description">{project.short_description}</p>
                                     <button className="card-btn" onClick={() => openModal(project)}>View</button>
                                 </div>
                             </div>
