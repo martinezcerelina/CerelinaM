@@ -68,12 +68,12 @@ export default function TargetDateField({
           border-radius:8px; padding:11px 38px 11px 14px; color:rgba(255,255,255,.85);
           font-family:'Space Grotesk', sans-serif; font-size:13px; outline:none; cursor:pointer;
         }
-        .dpf-input:focus { border-color:#FFD558; }
+        .dpf-input:focus { border-color: #FFD558; }
         .dpf-input::placeholder { color:rgba(255,255,255,.25); }
         .dpf-icon { position:absolute; right:12px; top:50%; transform:translateY(-50%); color:#FF007F; pointer-events:none; }
 
         .dpf-popover { position:absolute; top:calc(100% + 8px); right:0; z-index:50; }
-        .dpf-card { background:linear-gradient(135deg,#e8b4c8 0%,#d4708a 40%,#c45a7a 70%,#b8789a 100%); border-radius:24px; padding:20px; box-shadow:0 8px 32px rgba(180,80,120,.25); width:300px; }
+        .dpf-card { background:#0d0010; border-radius:24px; padding:20px; box-shadow:0 8px 32px rgba(180,80,120,.25); width:300px; }
         .dpf-headline { display:flex; align-items:baseline; gap:16px; margin-bottom:20px; padding:0 4px; }
         .dpf-month-name { font-size:44px; font-weight:700; color:#fff; line-height:1; letter-spacing:-1px; }
         .dpf-day-num { font-size:44px; font-weight:700; color:#fff; line-height:1; margin-left:auto; }
@@ -81,7 +81,7 @@ export default function TargetDateField({
         .dpf-month-head { font-size:11px; font-weight:600; color:rgba(255,255,255,.6); text-align:center; padding:4px 0; text-transform:uppercase; }
         .dpf-month-cell { font-size:13px; color:rgba(255,255,255,.8); text-align:center; cursor:pointer; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; margin:2px auto; transition:background .15s; }
         .dpf-month-cell:hover { background:rgba(255,255,255,.2); }
-        .dpf-month-cell.today, .dpf-month-cell.selected { background:linear-gradient(135deg,#c850a0,#8a2be2); color:#fff; font-weight:700; }
+        .dpf-month-cell.today, .dpf-month-cell.selected { background:linear-gradient(135deg,#ffffff ,#8B0050); color:#fff; font-weight:700; }
         .dpf-month-cell.other-month { color:rgba(255,255,255,.3); }
         .dpf-nav { display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
         .dpf-nav button { background:rgba(255,255,255,.2); border:none; color:#fff; width:30px; height:30px; border-radius:50%; cursor:pointer; font-size:15px; display:flex; align-items:center; justify-content:center; transition:background .15s; }
