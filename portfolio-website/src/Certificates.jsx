@@ -12,19 +12,11 @@ const certificatesData = [
     },
     // {
     //     id: 2,
-    //     title: "NATIONAL CERTIFICATE II IN COMPUTER SYSTEM SERVICING",
-    //     image: "./src/assets/NC2.png",
-    //     description: "Issued by the Technical Education and Skills Development Authority (TESDA) on October 15, 2023. This certification validates proficiency in installing and configuring computer systems, setting up computer networks and servers, and maintaining and repairing computer systems and networks.",
-    //     tags: ["Hardware Repair", "Network Config", "OS Installation", "Server Setup"],
-    //     fileUrl: "./src/assets/certificates/NC2-full.pdf",
-    // },
-    // {
-    //     id: 3,
-    //     title: "NATIONAL CERTIFICATE II IN COMPUTER SYSTEM SERVICING",
-    //     image: "./src/assets/NC2.png",
-    //     description: "Issued by the Technical Education and Skills Development Authority (TESDA) on October 15, 2023. This certification validates proficiency in installing and configuring computer systems, setting up computer networks and servers, and maintaining and repairing computer systems and networks.",
-    //     tags: ["Hardware Repair", "Network Config", "OS Installation", "Server Setup"],
-    //     fileUrl: "./src/assets/certificates/NC2-full.pdf",
+    //     title: "",
+    //     image: "",
+    //     description: "",
+    //     tags: [""],
+    //     fileUrl: "",
     // },
 ];
 

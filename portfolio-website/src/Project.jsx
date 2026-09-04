@@ -33,11 +33,12 @@ const webProjects = [
     }
     // {
     //     id: 3,
-    //     title: "shcoks",
+    //     title: "",
     //     image: "#",
-    //     category: "web",
+    //     category: "",
+    //     short_description: "",
     //     description: "",
-    //     tags: ["HTML/CSS", "React", "2D Animation", "GSAP"],
+    //     tags: [""],
     //     websiteUrl: "https://example.com",
     // },
 ];
@@ -45,29 +46,11 @@ const webProjects = [
 const animProjects = [
     // {
     //     id: 1,
-    //     title: "ALLOWANCE WISE",
+    //     title: "",
     //     image: "#",
     //     category: "anim",
-    //     description: "A high-fidelity interactive experience combining modern web technologies with fluid 2D animations.",
-    //     tags: ["2D Animation", "After Effects"],
-    //     animationUrl: "https://example.com/animation",
-    // },
-    // {
-    //     id: 2,
-    //     title: "ALLOWANCE WISE",
-    //     image: "#",
-    //     category: "anim",
-    //     description: "A high-fidelity interactive experience combining modern web technologies with fluid 2D animations.",
-    //     tags: ["2D Animation", "After Effects"],
-    //     animationUrl: "https://example.com/animation",
-    // },
-    // {
-    //     id: 3,
-    //     title: "ALLOWANCE WISE",
-    //     image: "#",
-    //     category: "anim",
-    //     description: "A high-fidelity interactive experience combining modern web technologies with fluid 2D animations.",
-    //     tags: ["2D Animation", "After Effects"],
+    //     description: "",
+    //     tags: [""],
     //     animationUrl: "https://example.com/animation",
     // },
 ];
