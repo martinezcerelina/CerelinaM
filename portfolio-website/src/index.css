@@ -1196,6 +1196,14 @@ margin: auto 0;
 
 .form-send-wrap { text-align: center; margin-top: 20px; }
 
+
+form,
+.right-contact,
+.form-row-3,
+.date-picker-container {
+    overflow: visible !important;
+}
+
 .btn-send {
   padding: 12px 40px;
   background: var(--yellow);

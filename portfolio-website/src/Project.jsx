@@ -36,7 +36,7 @@ const webProjects = [
     //     title: "shcoks",
     //     image: "#",
     //     category: "web",
-    //     description: "A high-fidelity interactive experience combining modern web technologies with fluid 2D animations. This project focuses on seamless user transitions and responsive layouts optimized for high-performance rendering.",
+    //     description: "",
     //     tags: ["HTML/CSS", "React", "2D Animation", "GSAP"],
     //     websiteUrl: "https://example.com",
     // },
@@ -44,7 +44,7 @@ const webProjects = [
 
 const animProjects = [
     // {
-    //     id: 4,
+    //     id: 1,
     //     title: "ALLOWANCE WISE",
     //     image: "#",
     //     category: "anim",
@@ -53,7 +53,7 @@ const animProjects = [
     //     animationUrl: "https://example.com/animation",
     // },
     // {
-    //     id: 5,
+    //     id: 2,
     //     title: "ALLOWANCE WISE",
     //     image: "#",
     //     category: "anim",
@@ -62,7 +62,7 @@ const animProjects = [
     //     animationUrl: "https://example.com/animation",
     // },
     // {
-    //     id: 6,
+    //     id: 3,
     //     title: "ALLOWANCE WISE",
     //     image: "#",
     //     category: "anim",
